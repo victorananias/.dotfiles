@@ -15,12 +15,8 @@ plugins=(
   copybuffer
   dirhistory
   jsontools
+  macos
 )
-
-if [[ "$OSTYPE" == "darwin"* ]]
-then
-  plugins+=(macos)
-fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,4 +25,4 @@ export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # source custom
-for f in ~/.bash_profile_*; do source $f; done
+for f in ~/custom/*; do source $f; done
