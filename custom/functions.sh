@@ -22,18 +22,5 @@ set-var-in-file () {
 
     sed -i "" "s/${variable}=.*/${variable}=\"${content}\"/" "$file"
 
-    szs
-}
-
-start-docker() {
-  if [[ "$OSTYPE" == "darwin"* ]]
-  then
-    printf "\nStarting Docker\n"
-    open -a Docker;
-    while [[ -z "$(! docker stats --no-stream 2> /dev/null)" ]];
-        do printf ".";
-        sleep 1
-    done
-    printf "\nDocker started\n"
-  fi
+    exec zsh
 }
