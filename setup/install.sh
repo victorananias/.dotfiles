@@ -3,11 +3,11 @@
 # install zsh
 sudo apt install zsh
 
-# install oh my zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
 # set zsh as default shell
 chsh -s $(which zsh)
+
+# install oh my zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # nvm 
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
@@ -22,6 +22,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-ln --symbolic ~/.dotfiles/.zshrc ~/.zshrc
-ln --symbolic ~/.dotfiles/.gitconfig ~/.gitconfig
-ln --symbolic ~/.dotfiles/.spaceshiprc.zsh ~/.spaceshiprc.zsh
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.spaceshiprc.zsh ~/.spaceshiprc.zsh
