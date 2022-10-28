@@ -17,11 +17,6 @@ plugins=(
   jsontools
 )
 
-if [[ "$OSTYPE" == "darwin"* ]]
-then
-  plugins+=(macos)
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=$HOME/go
