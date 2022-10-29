@@ -24,4 +24,4 @@ export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # source custom
-for f in ~/custom/*; do source $f; done
+for f in ~/.dotfiles/custom/*; do source $f; done
